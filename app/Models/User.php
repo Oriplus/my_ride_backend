@@ -32,6 +32,16 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+    
+    /**
+     * routeNotificationForTwilio
+     *
+     * @return string
+     */
+    public function routeNotificationForTwilio(): string
+    {
+        return $this->phone;
+    }
 
     public function driver()
     {
